@@ -27,6 +27,7 @@ var requestHandler = function(request, response)
 
 	if( url.parse(request.url).pathname == '/listings' )
 	{
+		console.log('Request handler found');
 		response.end(listingData);
     	}
     	else
@@ -51,7 +52,7 @@ fs.readFile('listings.json', 'utf8', function(err, data) {
 
    //Check for errors
 	if(err) throw err;
-	console.log('there has been no error');
+	//console.log('there has been no error');
 
 
    //Save the sate in the listingData variable already defined
